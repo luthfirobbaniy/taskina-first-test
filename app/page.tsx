@@ -1,95 +1,87 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Montserrat } from "next/font/google";
+import { ReactNode } from "react";
+
+const pages = [
+  {
+    id: 1,
+    name: "Page 1",
+  },
+  {
+    id: 2,
+    name: "Page 2",
+  },
+  {
+    id: 3,
+    name: "Page 3",
+  },
+  {
+    id: 4,
+    name: "Page 4",
+  },
+];
+
+function CheckboxItem(
+  props: {
+    caption: string;
+  },
+) {
+  const { caption } = props;
+
+  return (
+    <label className="checkbox-container">
+      <p className="text">{caption}</p>
+      <input type="checkbox" />
+      <div className="checkbox">
+        <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1" strokeLinecap="round"/>
+        </svg>
+      </div>
+    </label>
+  )
+}
+
+function Button(
+  props: {
+    children: ReactNode;
+  }
+) {
+  const { children } = props;
+
+  return (
+    <div className="button-container">
+      <button className="text">{children}</button>
+    </div>
+  )
+}
+
+function Divider() {
+  return (
+    <div className="line" />
+  )
+}
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container">
+      <CheckboxItem caption={"All pages"}/>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Divider />
+
+      <ul>
+        {
+          pages.map((page) => {
+            return (
+              <li key={page.id}>
+                <CheckboxItem caption={page.name} />
+              </li>
+            )
+          })
+        }
+      </ul>
+
+      <Divider />
+
+      <Button>Done</Button>
     </div>
   );
 }

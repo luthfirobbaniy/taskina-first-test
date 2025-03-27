@@ -1,42 +1,117 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+ul, p {
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+ul {
+  list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.container {
+  position: relative;
+  width: 370px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 15px 0px #1414141F, 0px 0px 4px 0px #1414141A;
+  margin: 85px auto;
+  padding: 10px 0;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 15px 8px 22px;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0;
+  font-style: normal;
+  color: #1F2128;
+  margin: auto 0;
+}
+
+.line {
+  border-bottom: 0.7px solid #CDCDCD;
+  margin: 10px 15px;
+}
+
+.checkbox {
+  display: flex;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
+}
+
+.checkbox-container:hover > .checkbox {
+  border: 1px solid #BDBDBD;
+}
+
+.checkbox-container:active > .checkbox::after {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 25px;
+  height: 25px;
+  border: 3px solid #2469F6;
+  border-radius: 6px;
+  opacity: 10%;
+  content: "";
+}
+
+.checkbox > svg {
+  margin: auto;
+}
+
+.checkbox-container:hover > .checkbox > svg {
+  display: block;
+  stroke: #E3E3E3;
+}
+
+.checkbox:active > svg {
+  display: block;
+  stroke: #878787;
+}
+
+input[type="checkbox"] {
+  display: none;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+input:checked + .checkbox {
+  background-color: #2469F6;
+}
+
+input:checked + .checkbox:hover {
+  background-color: #5087F8;
+}
+
+input:checked + .checkbox > svg {
+  stroke: #FFFFFF;
+}
+
+.button-container {
+  display: flex;
+  padding: 10px 15px;
+}
+
+button {
+  flex: 1;
+  background-color: #FFCE22;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #FFD84D;
 }
