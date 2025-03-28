@@ -1,0 +1,13 @@
+.license-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #DFDFDF;
+  width: 640px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.license-text {
+  margin-top: 16px;
+}

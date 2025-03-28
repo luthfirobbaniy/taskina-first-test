@@ -115,3 +115,8 @@ button {
 button:hover {
   background-color: #FFD84D;
 }
+
+.link {
+  width: max-content;
+  margin: 85px auto;
+}
