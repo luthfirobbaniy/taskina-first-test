@@ -27,7 +27,7 @@ export const CheckboxItem = (props: CheckboxItemProps) => {
   }
 
   return (
-    <label className="checkbox-container">
+    <label className="checkbox-item">
       <p className="text">{caption}</p>
       <input onChange={onChange} checked={checked} type="checkbox" />
       <div className="checkbox">

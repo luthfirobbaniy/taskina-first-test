@@ -31,7 +31,7 @@ export const CheckboxCard = (props: CheckboxCardPropsInterface) => {
   }
 
   return (
-    <div className="container">
+    <div className="checkbox-card">
       <CheckboxHeader
         caption={"All pages"}
         allChecked={allChecked}

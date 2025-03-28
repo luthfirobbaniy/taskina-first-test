@@ -7,7 +7,7 @@ ul {
   list-style: none;
 }
 
-.container {
+.checkbox-card {
   position: relative;
   width: 370px;
   border-radius: 6px;
@@ -17,7 +17,7 @@ ul {
   padding: 10px 0;
 }
 
-.checkbox-container {
+.checkbox-item {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -50,11 +50,11 @@ ul {
   border-radius: 6px;
 }
 
-.checkbox-container:hover > .checkbox {
+.checkbox-item:hover > .checkbox {
   border: 1px solid #BDBDBD;
 }
 
-.checkbox-container:active > .checkbox::after {
+.checkbox-item:active > .checkbox::after {
   position: absolute;
   top: -3px;
   left: -3px;
@@ -70,7 +70,7 @@ ul {
   margin: auto;
 }
 
-.checkbox-container:hover > .checkbox > svg {
+.checkbox-item:hover > .checkbox > svg {
   display: block;
   stroke: #E3E3E3;
 }
