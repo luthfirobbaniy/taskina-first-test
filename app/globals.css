@@ -109,11 +109,16 @@ button {
   background-color: #FFCE22;
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
   padding: 10px 20px;
 }
 
 button:hover {
   background-color: #FFD84D;
+}
+
+button:active {
+  background-color: #FFCE22;
 }
 
 .link {
