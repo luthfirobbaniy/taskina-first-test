@@ -12,7 +12,7 @@ export const CheckboxCard = (props: CheckboxCardPropsInterface) => {
 
   useEffect(() => {
     setAllChecked(totalChecked == data.length);
-  }, [totalChecked]);
+  }, [totalChecked, data.length]);
 
   const updateTotalChecked = (checked: boolean) => {
     if (checked) {
