@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CheckboxHeaderProps } from "../interfaces";
+import { CheckboxHeaderPropsInterface } from "../interfaces";
 
-export const CheckboxHeader = (props: CheckboxHeaderProps) => {
+export const CheckboxHeader = (props: CheckboxHeaderPropsInterface) => {
   const {
     caption,
     allChecked,

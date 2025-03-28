@@ -1,7 +1,7 @@
 import { ButtonPropsInterface } from "./ButtonPropsInterface";
 import { CheckboxCardPropsInterface } from "./CheckbosCardPropsInterface";
-import { CheckboxHeaderProps } from "./CheckboxHeaderProps";
-import { CheckboxItemProps } from "./CheckboxItemProps";
+import { CheckboxHeaderPropsInterface } from "./CheckboxHeaderPropsInterface";
+import { CheckboxItemPropsInterface } from "./CheckboxItemPropsInterface";
 import { LicenseInterface } from "./LicenseInterface";
 import { LinkButtonProps } from "./LinkButtonPropsInterface";
 import { PageInterface } from "./PageInterface";
@@ -10,8 +10,8 @@ import { RawLicensesInterface } from "./RawLicensesInterface";
 export type {
   ButtonPropsInterface,
   CheckboxCardPropsInterface,
-  CheckboxHeaderProps,
-  CheckboxItemProps,
+  CheckboxHeaderPropsInterface,
+  CheckboxItemPropsInterface,
   LicenseInterface,
   LinkButtonProps,
   PageInterface,
